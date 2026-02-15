@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:root {
+  --bg-black: #000000;
+  --card-bg: #111111;
+  --neon-yellow: #F0C000;
+  --neon-yellow-glow: rgba(255, 193, 7, 0.4);
+  --text-main: #ffffff;
+  --text-dim: #b3b3b3;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --border-color: #222222;
+  --sidebar-width: 90px;
+  --courses-width: 260px;
+  --navbar-height: 80px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--bg-black);
+  color: var(--text-main);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Utilities */
+.neon-text {
+  color: var(--neon-yellow);
+  text-shadow: 0 0 10px var(--neon-yellow-glow);
+}
+
+.neon-border {
+  border: 1px solid var(--neon-yellow);
+  box-shadow: 0 0 15px var(--neon-yellow-glow);
+}
+
+/* Generic Layout Wrapper */
+.dashboard-container {
+  display: flex;
+  padding-top: var(--navbar-height);
+  min-height: 100vh;
+}

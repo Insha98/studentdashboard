@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOSHUR SCIENTIST | LMS Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dark-theme">
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <i class="fas fa-user-graduate"></i>
+                <span>KOSHUR <span class="neon-text">SCIENTIST</span></span>
+            </div>
+        </div>
+        <div class="nav-center">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search lessons...">
+            </div>
+        </div>
+        <div class="nav-right">
+            <button class="icon-btn notification">
+                <i class="far fa-bell"></i>
+                <span class="badge"></span>
+            </button>
+            <button class="cta-btn">CATCH UP NOW</button>
+            <div class="profile-avatar">
+                <span>ZA</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Vertical Icon Sidebar -->
+        <aside class="sidebar-icons">
+            <div class="icon-item active">
+                <i class="fas fa-th-large"></i>
+                <span class="icon-label">Dashboard</span>
+            </div>
+            <div class="icon-item">
+                <i class="fas fa-book-open"></i>
+                <span class="icon-label">Courses</span>
+            </div>
+            <div class="icon-item">
+                <i class="fas fa-file-alt"></i>
+                <span class="icon-label">Subjects</span>
+            </div>
+            <div class="icon-item">
+                <i class="fas fa-user"></i>
+                <span class="icon-label">Profile</span>
+            </div>
+            <div class="icon-item bottom">
+                <i class="fas fa-cog"></i>
+                <span class="icon-label">Settings</span>
+            </div>
+        </aside>
+
+        <!-- Courses Panel -->
+        <aside class="courses-panel">
+            <div class="panel-header">
+                <h3>Courses</h3>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+            <div class="course-list">
+                <div class="course-mini-card">
+                    <div class="course-icon q-icon">Q</div>
+                    <div class="course-info">
+                        <h4>Quantum Physics</h4>
+                        <p>Unit 2: Wave Dynamics</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 78%;"></div>
+                        </div>
+                        <span class="progress-label">78% COMPLETE</span>
+                    </div>
+                </div>
+                <div class="course-mini-card">
+                    <div class="course-icon m-icon">M</div>
+                    <div class="course-info">
+                        <h4>Adv. Mathematics</h4>
+                        <p>Unit 7: Integrals</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 45%;"></div>
+                        </div>
+                        <span class="progress-label">45% COMPLETE</span>
+                    </div>
+                </div>
+                <div class="course-mini-card">
+                    <div class="course-icon b-icon">B</div>
+                    <div class="course-info">
+                        <h4>Molecular Bio</h4>
+                        <p>Unit 5: Cell Theory</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                        <span class="progress-label">90% COMPLETE</span>
+                    </div>
+                </div>
+                <div class="course-mini-card">
+                    <div class="course-icon h-icon">H</div>
+                    <div class="course-info">
+                        <h4>Modern History</h4>
+                        <p>Unit 4: Renaissance</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 15%;"></div>
+                        </div>
+                        <span class="progress-label">15% COMPLETE</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="welcome-box">
+                    <h1>Welcome back, <span class="neon-text">Zaira</span></h1>
+                    <p>Ready for today's challenge?</p>
+                </div>
+                <div class="streak-card">
+                    <div class="streak-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="streak-info">
+                        <span class="label">KEEP RISING</span>
+                        <span class="value">12 Days</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="section-container">
+                <div class="section-header">
+                    <h2>CONTINUE LEARNING</h2>
+                    <a href="#" class="see-all">See all</a>
+                </div>
+                <div class="learning-grid">
+                    <div class="learning-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&q=80"
+                                alt="Physics">
+                            <span class="tag physics-tag">PHYSICS</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Physics: Light & Optics</h3>
+                            <p>Lesson 4 of 12 • 15 mins left</p>
+                            <div class="progress-thin">
+                                <div class="progress-bar" style="width: 35%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="learning-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1509228468518-180dd482180c?w=400&q=80"
+                                alt="Maths">
+                            <span class="tag math-tag">MATH</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Advanced Calculus</h3>
+                            <p>Lesson 2 of 11 • 45 mins left</p>
+                            <div class="progress-thin">
+                                <div class="progress-bar" style="width: 18%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="learning-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&q=80"
+                                alt="Arts">
+                            <span class="tag arts-tag">ARTS</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Kashmiri Literature</h3>
+                            <p>Lesson 9 of 10 • 5 mins left</p>
+                            <div class="progress-thin">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-container">
+                <div class="section-header">
+                    <h2>MY SUBJECTS</h2>
+                </div>
+                <div class="subjects-grid">
+                    <div class="subject-item">
+                        <div class="subject-icon-wrap">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <span class="subject-label">PHYSICS</span>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-icon-wrap">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <span class="subject-label">MATH</span>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-icon-wrap">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <span class="subject-label">SCIENCE</span>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-icon-wrap">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <span class="subject-label">HISTORY</span>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-icon-wrap">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <span class="subject-label">ARTS</span>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-icon-wrap">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span class="subject-label">CS</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="bottom-grid">
+                <div class="bottom-card goal-card">
+                    <h3>MONTHLY GOAL</h3>
+                    <div class="circular-progress">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="progress" cx="50" cy="50" r="45"
+                                style="stroke-dasharray: 282.7; stroke-dashoffset: 90.4;"></circle>
+                        </svg>
+                        <div class="progress-text">
+                            <span class="percent">68%</span>
+                            <span class="label">PROGRESS</span>
+                        </div>
+                    </div>
+                    <p class="goal-footer">Almost there! Keep it up.</p>
+                </div>
+
+                <div class="bottom-card tasks-card">
+                    <div class="card-header-row">
+                        <h3>UPCOMING TASKS</h3>
+                        <div class="calendar-mini-btn">
+                            <i class="far fa-calendar-alt"></i>
+                        </div>
+                    </div>
+                    <div class="task-list">
+                        <div class="task-item">
+                            <div class="task-info">
+                                <h4>Physics: Light Quiz</h4>
+                                <p>Tomorrow, 10:00 AM</p>
+                            </div>
+                            <span class="status-pill urgent">URGENT</span>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-info">
+                                <h4>History: Submission</h4>
+                                <p>In 2 days</p>
+                            </div>
+                            <span class="status-pill medium">MEDIUM</span>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-info">
+                                <h4>Math: Practice Set</h4>
+                                <p>In 4 days</p>
+                            </div>
+                            <span class="status-pill low">LOW</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
