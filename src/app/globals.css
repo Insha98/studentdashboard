@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 :root {
@@ -10,17 +10,27 @@
   --text-dim: #b3b3b3;
   --glass-bg: rgba(255, 255, 255, 0.05);
   --border-color: #222222;
-  --sidebar-width: 90px;
+  --sidebar-width: 260px;
   --courses-width: 260px;
   --navbar-height: 80px;
   --transition: all 0.3s ease;
+
+  /* Typography Scale */
+  --font-page-title: clamp(28px, 4vw, 32px);
+  --font-section-title: clamp(20px, 3vw, 24px);
+  --font-card-title: 17px;
+  --font-body: 15px;
+  --font-label: 13px;
+
+  /* Font Families */
+  --font-heading: 'Poppins', 'Inter', sans-serif;
+  --font-main: 'Inter', 'Roboto', sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', 'Roboto', sans-serif;
 }
 
 body {
@@ -28,6 +38,36 @@ body {
   color: var(--text-main);
   overflow-x: hidden;
   min-height: 100vh;
+  font-family: var(--font-main);
+  font-size: var(--font-body);
+  line-height: 1.6;
+}
+
+h1,
+.page-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-page-title);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+h2,
+.section-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-section-title);
+  font-weight: 600;
+}
+
+h3,
+.card-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-card-title);
+  font-weight: 600;
+}
+
+.label-text {
+  font-size: var(--font-label);
+  font-family: var(--font-main);
 }
 
 /* Utilities */

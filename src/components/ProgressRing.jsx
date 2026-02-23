@@ -2,44 +2,43 @@
 
 import React, { useEffect, useState } from 'react';
 
-interface ProgressRingProps {
-    percent: number;
-    label: string;
-}
+const ProgressRing = ({ percent, label }) => {
+  const radius = 45;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percent / 100) * circumference;
 
-const ProgressRing: React.FC<ProgressRingProps> = ({ percent, label }) => {
-    const [offset, setOffset] = useState(282.7);
-    const radius = 45;
-    const circumference = 2 * Math.PI * radius;
+  return (
+    <div className="circular-progress">
+      <svg viewBox="0 0 100 100">
+        <circle className="bg" cx="50" cy="50" r={radius}></circle>
+        <circle
+          className="progress"
+          cx="50"
+          cy="50"
+          r={radius}
+          style={{ strokeDasharray: circumference, strokeDashoffset: offset }}
+        ></circle>
+      </svg>
+      <div className="progress-text">
+        <span className="percent">{percent}%</span>
+        <span className="label">{label}</span>
+      </div>
 
-    useEffect(() => {
-        const progressOffset = circumference - (percent / 100) * circumference;
-        setOffset(progressOffset);
-    }, [percent, circumference]);
-
-    return (
-        <div className="circular-progress">
-            <svg viewBox="0 0 100 100">
-                <circle className="bg" cx="50" cy="50" r={radius}></circle>
-                <circle
-                    className="progress"
-                    cx="50"
-                    cy="50"
-                    r={radius}
-                    style={{ strokeDasharray: circumference, strokeDashoffset: offset }}
-                ></circle>
-            </svg>
-            <div className="progress-text">
-                <span className="percent">{percent}%</span>
-                <span className="label">{label}</span>
-            </div>
-
-            <style jsx>{`
+      <style jsx>{`
         .circular-progress {
           position: relative;
           width: 150px;
           height: 150px;
           margin: 0 auto 20px;
+        }
+        @media (max-width: 480px) {
+          .circular-progress {
+            width: 120px;
+            height: 120px;
+          }
+          .progress-text .percent {
+            font-size: 1.5rem;
+          }
         }
         .circular-progress svg {
           transform: rotate(-90deg);
@@ -75,8 +74,8 @@ const ProgressRing: React.FC<ProgressRingProps> = ({ percent, label }) => {
           font-weight: 700;
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default ProgressRing;

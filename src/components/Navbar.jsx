@@ -48,8 +48,9 @@ const Navbar = () => {
           display: flex;
           align-items: center;
           gap: 12px;
+          font-family: var(--font-heading);
           font-weight: 700;
-          font-size: 1.2rem;
+          font-size: var(--font-section-title);
           letter-spacing: 0.5px;
         }
         .logo i {
@@ -62,6 +63,17 @@ const Navbar = () => {
           justify-content: center;
           max-width: 1000px;
           margin: 0 40px;
+        }
+        @media (max-width: 768px) {
+          .nav-center {
+            display: none;
+          }
+          .nav-right .cta-btn {
+            display: none;
+          }
+          .logo span {
+            font-size: 1rem;
+          }
         }
         .search-bar {
           width: 100%;
@@ -88,7 +100,8 @@ const Navbar = () => {
           color: white;
           width: 100%;
           outline: none;
-          font-size: 0.9rem;
+          font-size: var(--font-body);
+          font-family: var(--font-main);
         }
         .nav-right {
           display: flex;
@@ -101,8 +114,9 @@ const Navbar = () => {
           border: none;
           padding: 10px 24px;
           border-radius: 50px;
-          font-weight: 800;
-          font-size: 0.85rem;
+          font-family: var(--font-main);
+          font-weight: 600;
+          font-size: var(--font-label);
           cursor: pointer;
           transition: var(--transition);
           box-shadow: 0 0 15px var(--neon-yellow-glow);
@@ -151,8 +165,9 @@ const Navbar = () => {
         }
         .profile-avatar span {
           color: black;
-          font-weight: 800;
-          font-size: 0.9rem;
+          font-family: var(--font-main);
+          font-weight: 600;
+          font-size: var(--font-label);
         }
       `}</style>
     </nav>

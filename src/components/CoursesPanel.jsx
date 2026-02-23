@@ -72,8 +72,9 @@ const CoursesPanel = () => {
         }
         .panel-header h3 {
           color: var(--neon-yellow);
+          font-family: var(--font-heading);
           font-weight: 600;
-          font-size: 1.1rem;
+          font-size: var(--font-card-title);
         }
         .panel-header i {
           color: var(--text-dim);
@@ -125,8 +126,9 @@ const CoursesPanel = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          font-weight: 700;
-          font-size: 0.9rem;
+          font-family: var(--font-heading);
+          font-weight: 600;
+          font-size: var(--font-label);
           color: black;
         }
         .theme-icon { background: var(--neon-yellow); }
@@ -137,7 +139,8 @@ const CoursesPanel = () => {
           border-top: 1px solid var(--border-color);
         }
         .activity-section h3 {
-          font-size: 0.9rem;
+          font-size: var(--font-label);
+          font-family: var(--font-heading);
           color: var(--text-dim);
           margin-bottom: 20px;
           text-transform: uppercase;
@@ -162,20 +165,25 @@ const CoursesPanel = () => {
           box-shadow: 0 0 5px var(--neon-yellow);
         }
         .activity-title {
-          font-size: 0.75rem;
+          font-size: var(--font-label);
+          font-family: var(--font-main);
           color: var(--text-main);
           margin-bottom: 2px;
         }
         .activity-time {
-          font-size: 0.65rem;
+          font-size: 11px;
+          font-family: var(--font-main);
           color: var(--text-dim);
         }
         .course-info h4 {
-          font-size: 0.85rem;
+          font-size: var(--font-body);
+          font-family: var(--font-main);
+          font-weight: 700;
           margin-bottom: 2px;
         }
         .course-info p {
-          font-size: 0.7rem;
+          font-size: var(--font-label);
+          font-family: var(--font-main);
           color: var(--text-dim);
           margin-bottom: 8px;
         }
@@ -193,9 +201,11 @@ const CoursesPanel = () => {
           box-shadow: 0 0 10px var(--neon-yellow), 0 0 20px var(--neon-yellow-glow);
         }
         .progress-label {
-          font-size: 0.6rem;
-          font-weight: 700;
+          font-size: 10px;
+          font-family: var(--font-main);
+          font-weight: 600;
           color: var(--neon-yellow);
+          letter-spacing: 0.5px;
         }
          @media (max-width: 1200px) {
             .courses-panel { display: none; }
