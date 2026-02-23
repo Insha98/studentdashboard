@@ -26,8 +26,8 @@ const styles = {
   // --- HEADER FLEX BOX ---
   headerRow: {
     display: 'flex',
-    justifyContent: 'space-between', // Isse text left mein aur buttons right mein chale jayenge
-    alignItems: 'flex-end', // Items ko niche se align karne ke liye
+    justifyContent: 'space-between', 
+    alignItems: 'flex-end', 
     marginBottom: '40px',
   },
   titleSection: {
@@ -48,7 +48,7 @@ const styles = {
   },
   filterContainer: {
     display: 'flex',
-    backgroundColor: 'rgba(255, 255, 255, 0.05)', // Buttons ke peeche halka background
+    backgroundColor: 'rgba(255, 255, 255, 0.05)', 
     padding: '6px',
     borderRadius: '16px',
     gap: '5px',
