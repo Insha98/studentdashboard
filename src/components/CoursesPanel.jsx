@@ -19,21 +19,14 @@ const CoursesPanel = () => {
   return (
     <aside className="courses-panel">
       <div className="panel-header">
-        <h3>Courses</h3>
+        {/* Only the icon remains in the header */}
         <i className="fas fa-ellipsis-v"></i>
       </div>
       <div className="course-list">
         {courses.map((course, index) => (
           <div key={index} className="course-mini-card">
+            {/* ONLY THE ICON IS KEPT HERE */}
             <div className={`course-icon ${course.colorClass}`}>{course.icon}</div>
-            <div className="course-info">
-              <h4>{course.name}</h4>
-              <p>{course.unit}</p>
-              <div className="progress-container">
-                <div className="progress-bar" style={{ width: `${course.progress}%` }}></div>
-              </div>
-              <span className="progress-label">{course.progress}% COMPLETE</span>
-            </div>
           </div>
         ))}
 
@@ -54,52 +47,7 @@ const CoursesPanel = () => {
       </div>
 
       <style jsx>{`
-        .courses-panel {
-          width: var(--courses-width);
-          padding: 30px 20px;
-          border-right: 1px solid var(--border-color);
-          position: fixed;
-          left: var(--sidebar-width);
-          bottom: 0;
-          top: var(--navbar-height);
-          background: var(--bg-black);
-        }
-        .panel-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 30px;
-        }
-        .panel-header h3 {
-          color: var(--neon-yellow);
-          font-family: var(--font-heading);
-          font-weight: 600;
-          font-size: var(--font-card-title);
-        }
-        .panel-header i {
-          color: var(--text-dim);
-          font-size: 0.9rem;
-        }
-        .course-list {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-          overflow-y: auto;
-          max-height: calc(100vh - var(--navbar-height) - 100px);
-          padding-right: 5px;
-        }
-        .course-list::-webkit-scrollbar {
-          width: 4px;
-        }
-        .course-list::-webkit-scrollbar-track {
-          background: rgba(255, 255, 255, 0.05);
-          border-radius: 10px;
-        }
-        .course-list::-webkit-scrollbar-thumb {
-          background: var(--neon-yellow);
-          border-radius: 10px;
-          box-shadow: 0 0 5px var(--neon-yellow-glow);
-        }
+        /* Tip: I added justify-content center so the icons look good alone */
         .course-mini-card {
           background: var(--card-bg);
           border: 1px solid var(--border-color);
@@ -107,109 +55,12 @@ const CoursesPanel = () => {
           padding: 15px;
           display: flex;
           align-items: center;
-          gap: 15px;
+          justify-content: center; 
           transition: var(--transition);
           cursor: pointer;
           box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
-        .course-mini-card:hover {
-          transform: scale(1.05);
-          border-color: var(--neon-yellow);
-          box-shadow: 
-            0 0 20px var(--neon-yellow-glow),
-            0 0 40px rgba(255, 193, 7, 0.1);
-        }
-        .course-icon {
-          min-width: 35px;
-          height: 35px;
-          border-radius: 8px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-family: var(--font-heading);
-          font-weight: 600;
-          font-size: var(--font-label);
-          color: black;
-        }
-        .theme-icon { background: var(--neon-yellow); }
-        
-        .activity-section {
-          margin-top: 30px;
-          padding-top: 20px;
-          border-top: 1px solid var(--border-color);
-        }
-        .activity-section h3 {
-          font-size: var(--font-label);
-          font-family: var(--font-heading);
-          color: var(--text-dim);
-          margin-bottom: 20px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-        }
-        .activity-list {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-        }
-        .activity-item {
-          display: flex;
-          gap: 12px;
-          align-items: flex-start;
-        }
-        .activity-dot {
-          width: 8px;
-          height: 8px;
-          background: var(--neon-yellow);
-          border-radius: 50%;
-          margin-top: 4px;
-          box-shadow: 0 0 5px var(--neon-yellow);
-        }
-        .activity-title {
-          font-size: var(--font-label);
-          font-family: var(--font-main);
-          color: var(--text-main);
-          margin-bottom: 2px;
-        }
-        .activity-time {
-          font-size: 11px;
-          font-family: var(--font-main);
-          color: var(--text-dim);
-        }
-        .course-info h4 {
-          font-size: var(--font-body);
-          font-family: var(--font-main);
-          font-weight: 700;
-          margin-bottom: 2px;
-        }
-        .course-info p {
-          font-size: var(--font-label);
-          font-family: var(--font-main);
-          color: var(--text-dim);
-          margin-bottom: 8px;
-        }
-        .progress-container {
-          width: 100%;
-          height: 4px;
-          background: rgba(255, 255, 255, 0.1);
-          border-radius: 10px;
-          margin-bottom: 5px;
-        }
-        .progress-bar {
-          height: 100%;
-          background: var(--neon-yellow);
-          border-radius: 10px;
-          box-shadow: 0 0 10px var(--neon-yellow), 0 0 20px var(--neon-yellow-glow);
-        }
-        .progress-label {
-          font-size: 10px;
-          font-family: var(--font-main);
-          font-weight: 600;
-          color: var(--neon-yellow);
-          letter-spacing: 0.5px;
-        }
-         @media (max-width: 1200px) {
-            .courses-panel { display: none; }
-        }
+        /* ... keep the rest of your styles ... */
       `}</style>
     </aside>
   );
